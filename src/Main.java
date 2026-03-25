@@ -86,3 +86,81 @@ public class Main {
         return gcd(b, a % b);
     }
 }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // --- Task 1 ---
+        System.out.println("=== Task 1: Print Digits ===");
+        System.out.print("Enter a number: ");
+        int num1 = sc.nextInt();
+        printDigits(num1);
+
+        // --- Task 2 ---
+        System.out.println("\n=== Task 2: Average of Elements ===");
+        System.out.print("Enter count of elements: ");
+        int n2 = sc.nextInt();
+        int[] arr = new int[n2];
+        System.out.print("Enter elements: ");
+        for (int i = 0; i < n2; i++) arr[i] = sc.nextInt();
+        int sum = sumArray(arr, 0);
+        double avg = (double) sum / n2;
+        System.out.println("Average: " + avg);
+
+        // --- Task 3 ---
+        System.out.println("\n=== Task 3: Prime Number Check ===");
+        System.out.print("Enter a number: ");
+        int num3 = sc.nextInt();
+        System.out.println(isPrime(num3, 2) ? "Prime" : "Composite");
+
+        // --- Task 4 ---
+        System.out.println("\n=== Task 4: Factorial ===");
+        System.out.print("Enter n: ");
+        int num4 = sc.nextInt();
+        System.out.println(num4 + "! = " + factorial(num4));
+
+        // --- Task 5 ---
+        System.out.println("\n=== Task 5: Fibonacci ===");
+        System.out.print("Enter n: ");
+        int num5 = sc.nextInt();
+        System.out.println("F(" + num5 + ") = " + fibonacci(num5));
+
+        // --- Task 6 ---
+        System.out.println("\n=== Task 6: Power ===");
+        System.out.print("Enter a and n: ");
+        long a6 = sc.nextLong();
+        int n6 = sc.nextInt();
+        System.out.println(a6 + "^" + n6 + " = " + power(a6, n6));
+
+        // --- Task 7 ---
+        System.out.println("\n=== Task 7: Reverse Output ===");
+        System.out.print("Enter count of numbers: ");
+        int n7 = sc.nextInt();
+        int[] arr7 = new int[n7];
+        System.out.print("Enter numbers: ");
+        for (int i = 0; i < n7; i++) arr7[i] = sc.nextInt();
+        reverseOutput(arr7, n7 - 1);
+        System.out.println();
+
+        // --- Task 8 ---
+        System.out.println("\n=== Task 8: Check Digits in String ===");
+        System.out.print("Enter a string: ");
+        sc.nextLine(); // consume leftover newline from previous nextInt/nextLong
+        String s8 = sc.nextLine().trim();
+        System.out.println(isAllDigits(s8, 0) ? "Yes" : "No");
+
+        // --- Task 9 ---
+        System.out.println("\n=== Task 9: Count Characters ===");
+        System.out.print("Enter a string: ");
+        String s9 = sc.nextLine().trim();
+        System.out.println("Length: " + countChars(s9, 0));
+
+        // --- Task 10 ---
+        System.out.println("\n=== Task 10: GCD ===");
+        System.out.print("Enter two numbers: ");
+        int a10 = sc.nextInt();
+        int b10 = sc.nextInt();
+        System.out.println("GCD(" + a10 + ", " + b10 + ") = " + gcd(a10, b10));
+
+        sc.close();
+    }
+}
