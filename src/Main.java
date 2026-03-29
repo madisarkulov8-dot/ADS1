@@ -1,10 +1,9 @@
 import java.util.Scanner;
 
-public class Main {
+public class as {
 
-    
+
     // PART 1. Recursion with Numbers
-   
 
     // Task 1. Print Digits of a Number
     // Prints each digit of the number on a separate line (left to right)
@@ -38,9 +37,9 @@ public class Main {
         return n * factorial(n - 1);
     }
 
-    
+
     // PART 2. Recursion with Sequences
-    
+
 
     // Task 5. Fibonacci Number
     static long fibonacci(int n) {
@@ -63,9 +62,9 @@ public class Main {
         reverseOutput(arr, index - 1);
     }
 
-    
+
     // PART 3. Recursion with Strings
-    
+
 
     // Task 8. Check Digits in String
     static boolean isAllDigits(String s, int index) {
@@ -85,7 +84,11 @@ public class Main {
         if (b == 0) return a;
         return gcd(b, a % b);
     }
-}
+
+
+    // MAIN — демонстрация всех задач
+
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
